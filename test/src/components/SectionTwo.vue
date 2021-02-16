@@ -5,7 +5,6 @@
       v-model="slide"
       controls
       background="#ababab"
-      :interval="0"
     >
       <b-carousel-slide>
         <template v-slot:img>
@@ -56,7 +55,7 @@
       </b-carousel-slide>
       <b-carousel-slide>
         <template v-slot:img>
-          <div class="card-slider">
+          <div class="card-slider h-35">
             <b-card-group>
               <div class="py-0 px-4">
                 <b-card
@@ -103,7 +102,7 @@
       </b-carousel-slide>
       <b-carousel-slide>
         <template v-slot:img>
-          <div class="card-slider">
+          <div class="card-slider h-35">
             <b-card-group>
               <div class="py-0 px-4">
                 <b-card
