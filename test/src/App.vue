@@ -4,6 +4,8 @@
     <SectionTwo />
     <SectionThree />
     <SectionFour />
+    <SectionFive />
+    <Footer />
   </div>
 </template>
 
@@ -12,6 +14,8 @@ import SectionOne from "./components/SectionOne.vue";
 import SectionTwo from "./components/SectionTwo.vue";
 import SectionThree from "./components/SectionThree.vue";
 import SectionFour from "./components/SectionFour.vue";
+import SectionFive from "./components/SectionFive.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -19,7 +23,9 @@ export default {
     SectionOne,
     SectionTwo,
     SectionThree,
-    SectionFour
+    SectionFour,
+    SectionFive,
+    Footer
   }
 };
 </script>
@@ -36,14 +42,24 @@ body {
   color: #2c3e50;
   background-color: black;
 }
+.h-30 {
+  height: 30rem;
+}
 
 .h-35 {
   height: 35rem;
 }
-
-.h-45 {
-  height: 45rem;
+.h-40 {
+  height: 40rem;
 }
+.h-50rem {
+  height: 50rem;
+}
+
+.h-66 {
+  height: 66%;
+}
+
 .center-flex {
   display: flex;
   align-items: center;

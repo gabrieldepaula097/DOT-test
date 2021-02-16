@@ -1,11 +1,11 @@
 <template>
   <div
     class="p-0 div-main"
-    :class="{ 'h-35': this.openTab === 0, 'h-45': this.openTab > 0 }"
+    :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 }"
   >
     <div
       class="row mx-0"
-      :class="{ 'h-35': this.openTab === 0, 'h-45': this.openTab > 0 }"
+      :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 }"
     >
       <div class="col-12 center-flex">
         <div class="accordion accordion-alt" role="tablist">
@@ -209,7 +209,7 @@
           <b-card no-body class="">
             <b-card-header
               header-tag="header"
-              class="p-0 last mb-1px"
+              class="p-0 last"
               :class="{ 'border-bottom-0': this.openTab === 5 }"
               role="tab"
             >
