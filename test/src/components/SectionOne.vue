@@ -5,6 +5,7 @@
         id="carousel-1"
         v-model="slide"
         indicators
+        :interval="5000"
         background="#ababab"
       >
         <b-carousel-slide :img-src="require('@/assets/img/slider-img.png')">

@@ -96,7 +96,6 @@ export default {
       alert('Formulário validado:\n' + JSON.stringify(this.form))
     },
     formatter(value) {
-      console.log(value.length)
       var x = null
       if(value.length > 14) {
         x = value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);

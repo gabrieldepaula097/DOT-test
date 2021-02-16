@@ -4,6 +4,7 @@
       id="carousel-2"
       v-model="slide"
       controls
+      :interval="5000"
       background="#ababab"
     >
       <b-carousel-slide>
@@ -201,6 +202,15 @@ export default {
 .text-slider h6 {
   color: white;
   font-weight: 600;
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+  #carousel-2 .carousel-control-prev {
+    width:85px!important;
+  }
+  #carousel-2 .carousel-control-next {
+    width:85px!important;
+  }
 }
 </style>
 <style lang="css" scoped>
