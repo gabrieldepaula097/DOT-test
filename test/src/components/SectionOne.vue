@@ -8,9 +8,9 @@
         background="#ababab"
       >
         <b-carousel-slide :img-src="require('@/assets/img/slider-img.png')">
-          <h1 class="title-carousel">LOREM IPSUM</h1>
+          <h1 class="title-carousel">{{ title }}</h1>
           <h4 class="subtitle-carousel">
-            Lorem ipsum dolor sti amet, consectetur adipiscing elit
+            {{ subtitle }}
           </h4>
           <div class="mt-4">
             <span @click="scroll('carousel-2')">
@@ -22,9 +22,9 @@
           </div>
         </b-carousel-slide>
         <b-carousel-slide :img-src="require('@/assets/img/slider-img.png')">
-          <h1 class="title-carousel">LOREM IPSUM</h1>
+          <h1 class="title-carousel">{{ title }}</h1>
           <h4 class="subtitle-carousel">
-            Lorem ipsum dolor sti amet, consectetur adipiscing elit
+            {{ subtitle }}
           </h4>
           <div class="mt-4">
             <span @click="scroll('carousel-2')">
@@ -36,9 +36,9 @@
           </div>
         </b-carousel-slide>
         <b-carousel-slide :img-src="require('@/assets/img/slider-img.png')">
-          <h1 class="title-carousel">LOREM IPSUM</h1>
+          <h1 class="title-carousel">{{ title }}</h1>
           <h4 class="subtitle-carousel">
-            Lorem ipsum dolor sti amet, consectetur adipiscing elit
+            {{ subtitle }}
           </h4>
           <div class="mt-4">
             <span @click="scroll('carousel-2')">
@@ -58,7 +58,9 @@
 export default {
   data() {
     return {
-      slide: 0
+      slide: 0,
+      title: "LOREM IPSUM",
+      subtitle: "Lorem ipsum dolor sti amet, consectetur adipiscing elit"
     };
   },
   computed: {
