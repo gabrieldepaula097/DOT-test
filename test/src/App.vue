@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <SectionOneTwo />
+    <SectionOne />
+    <SectionTwo />
+    <SectionThree />
   </div>
 </template>
 
 <script>
-import SectionOneTwo from "./components/SectionOneTwo.vue";
+import SectionOne from "./components/SectionOne.vue";
+import SectionTwo from "./components/SectionTwo.vue";
+import SectionThree from "./components/SectionThree.vue";
 
 export default {
   name: "App",
   components: {
-    SectionOneTwo
+    SectionOne,
+    SectionTwo,
+    SectionThree
   }
 };
 </script>
