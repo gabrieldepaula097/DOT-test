@@ -1,13 +1,15 @@
 # DOT-test
 
+# Vue.js Version 
+
 ## Project setup
 ```
-cd test
+cd vue-version
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Compiles and hot-reloads for development and live view
 ```
-cd test
+cd vue-version
 npm run serve
 ```

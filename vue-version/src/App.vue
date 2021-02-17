@@ -30,8 +30,8 @@ export default {
   },
   data() {
     return {
-      checkMobile: null,
-    }
+      checkMobile: null
+    };
   },
   mounted() {
     this.checkMobile = checkMobile();
@@ -73,6 +73,10 @@ body {
   height: 66%;
 }
 
+.h-85 {
+  height: 85%;
+}
+
 .center-flex {
   display: flex;
   align-items: center;
@@ -92,6 +96,6 @@ body {
 }
 
 .w-100vw {
-  width: 100vw!important;
+  width: 100vw !important;
 }
 </style>

@@ -1,7 +1,10 @@
 <template>
   <div class="p-0 div-main-triangle h-30 center-flex">
-    <b-form @submit="onSubmit" class="h-66">
-      <div class="row">
+    <b-form
+      @submit="onSubmit"
+      :class="{ 'h-66': !checkMobile, 'h-85': checkMobile }"
+    >
+      <div class="row" :class="{ 'm-0': checkMobile }">
         <div class="col-12">
           <b-form-group id="input-group-1">
             <b-form-input
@@ -18,7 +21,7 @@
             </b-form-invalid-feedback>
           </b-form-group>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <b-form-group id="input-group-2">
             <b-form-input
               id="input-2"
@@ -29,7 +32,7 @@
             ></b-form-input>
           </b-form-group>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <b-form-group id="input-group-3">
             <b-form-input
               id="input-3"

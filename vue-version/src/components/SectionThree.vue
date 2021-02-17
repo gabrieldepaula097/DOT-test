@@ -1,38 +1,38 @@
 <template>
   <div class="p-0 main-div" :class="{ 'h-35': !this.checkMobile }">
     <div class="row mx-0" :class="{ 'h-35': !this.checkMobile }">
-        <div class="col-6 center-flex" v-if="!checkMobile">
-          <div class="border-img mt-5per">
-            <b-img
-              v-bind="mainProps"
-              rounded="circle"
-              :src="require('@/assets/img/circle-img.png')"
-            ></b-img>
-          </div>
+      <div class="col-6 center-flex" v-if="!checkMobile">
+        <div class="border-img mt-5per">
+          <b-img
+            v-bind="mainProps"
+            rounded="circle"
+            :src="require('@/assets/img/circle-img.png')"
+          ></b-img>
         </div>
-        <div class="col-6 left-flex flex-column" v-if="!checkMobile">
-          <div class="paragraphs mt-5per">
-            <h2>
-              <strong>{{ title }}</strong>
-            </h2>
-            <p>
+      </div>
+      <div class="col-6 left-flex flex-column" v-if="!checkMobile">
+        <div class="paragraphs mt-5per">
+          <h2>
+            <strong>{{ title }}</strong>
+          </h2>
+          <p>
+            {{ text }}
+          </p>
+          <p>
+            <strong>
               {{ text }}
-            </p>
-            <p>
-              <strong>
-                {{ text }}
-              </strong>
-            </p>
-            <p>
-              <em>
-                {{ text }}
-              </em>
-            </p>
-            <p>
+            </strong>
+          </p>
+          <p>
+            <em>
               {{ text }}
-            </p>
-          </div>
+            </em>
+          </p>
+          <p>
+            {{ text }}
+          </p>
         </div>
+      </div>
       <div v-if="checkMobile">
         <div class="col-12 center-flex p-0">
           <img
@@ -79,13 +79,13 @@ export default {
         blankColor: "#fff",
         width: 388,
         height: 388,
-        center: true,
+        center: true
       },
       title: "LOREM IPSUM",
       text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
     };
-  },
+  }
 };
 </script>
 

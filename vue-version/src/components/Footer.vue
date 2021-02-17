@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  props: ["checkMobile"],
+  props: ["checkMobile"]
 };
 </script>
 
