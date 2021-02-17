@@ -70,6 +70,7 @@
 
 <script>
 export default {
+  props: ["checkMobile"],
   data() {
     return {
       form: {

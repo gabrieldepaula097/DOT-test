@@ -344,21 +344,16 @@
 </template>
 
 <script>
-import { checkMobile } from "@/helpers/checkMobile.js";
-
 export default {
+  props: ["checkMobile"],
   data() {
     return {
-      checkMobile: null,
       slide: 0,
       title: "LOREM IPSUM",
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
     };
   },
-  mounted() {
-    this.checkMobile = checkMobile();
-  }
 };
 </script>
 

@@ -262,6 +262,7 @@
 
 <script>
 export default {
+  props: ["checkMobile"],
   data() {
     return {
       openTab: 1,

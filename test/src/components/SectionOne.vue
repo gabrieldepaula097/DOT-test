@@ -35,6 +35,7 @@
 
 <script>
 export default {
+  props: ["checkMobile"],
   data() {
     return {
       slide: 0,

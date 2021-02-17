@@ -1,36 +1,71 @@
 <template>
-  <div class="p-0 h-35 main-div">
-    <div class="row h-35 mx-0">
-      <div class="col-6 center-flex">
-        <div class="border-img mt-5per">
-          <b-img
-            v-bind="mainProps"
-            rounded="circle"
-            :src="require('@/assets/img/circle-img.png')"
-          ></b-img>
+  <div class="p-0 main-div" :class="{ 'h-35': !this.checkMobile }">
+    <div class="row mx-0" :class="{ 'h-35': !this.checkMobile }">
+      <div v-if="!checkMobile">
+        <div class="col-6 center-flex">
+          <div class="border-img mt-5per">
+            <b-img
+              v-bind="mainProps"
+              rounded="circle"
+              :src="require('@/assets/img/circle-img.png')"
+            ></b-img>
+          </div>
+        </div>
+        <div class="col-6 left-flex flex-column">
+          <div class="paragraphs mt-5per">
+            <h2>
+              <strong>{{ title }}</strong>
+            </h2>
+            <p>
+              {{ text }}
+            </p>
+            <p>
+              <strong>
+                {{ text }}
+              </strong>
+            </p>
+            <p>
+              <em>
+                {{ text }}
+              </em>
+            </p>
+            <p>
+              {{ text }}
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-6 left-flex flex-column">
-        <div class="paragraphs mt-5per">
-          <h2>
-            <strong>{{ title }}</strong>
-          </h2>
-          <p>
-            {{ text }}
-          </p>
-          <p>
-            <strong>
+      <div v-if="checkMobile">
+        <div class="col-12 center-flex p-0">
+          <img
+            class="w-100vw"
+            :src="require('@/assets/img/circle-img-mobile.png')"
+          />
+        </div>
+        <div class="col-12 center-flex flex-column">
+          <div class="title-three">
+            <h2>
+              <strong>{{ title }}</strong>
+            </h2>
+          </div>
+          <div class="text-three">
+            <p>
               {{ text }}
-            </strong>
-          </p>
-          <p>
-            <em>
+            </p>
+            <p>
+              <strong>
+                {{ text }}
+              </strong>
+            </p>
+            <p>
+              <em>
+                {{ text }}
+              </em>
+            </p>
+            <p>
               {{ text }}
-            </em>
-          </p>
-          <p>
-            {{ text }}
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -39,19 +74,20 @@
 
 <script>
 export default {
+  props: ["checkMobile"],
   data() {
     return {
       mainProps: {
         blankColor: "#fff",
         width: 388,
         height: 388,
-        center: true
+        center: true,
       },
       title: "LOREM IPSUM",
       text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
     };
-  }
+  },
 };
 </script>
 
@@ -80,5 +116,24 @@ p {
   position: relative;
   width: 428px;
   border: 20px solid #313131;
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 320px) and (max-width: 599px) {
+  h2,
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  .title-three {
+    position: relative;
+    bottom: 3rem;
+  }
+
+  .text-three {
+    position: relative;
+    bottom: 1.5rem;
+  }
 }
 </style>

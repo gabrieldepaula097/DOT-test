@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["checkMobile"],
+};
 </script>
 
 <style lang="css">

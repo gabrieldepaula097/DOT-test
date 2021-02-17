@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <SectionOne />
-    <SectionTwo />
-    <SectionThree />
-    <SectionFour />
-    <SectionFive />
-    <Footer />
+    <SectionOne :checkMobile="checkMobile" />
+    <SectionTwo :checkMobile="checkMobile" />
+    <SectionThree :checkMobile="checkMobile" />
+    <SectionFour :checkMobile="checkMobile" />
+    <SectionFive :checkMobile="checkMobile" />
+    <Footer :checkMobile="checkMobile" />
   </div>
 </template>
 
@@ -16,6 +16,7 @@ import SectionThree from "./components/SectionThree.vue";
 import SectionFour from "./components/SectionFour.vue";
 import SectionFive from "./components/SectionFive.vue";
 import Footer from "./components/Footer.vue";
+import { checkMobile } from "@/helpers/checkMobile.js";
 
 export default {
   name: "App",
@@ -26,6 +27,14 @@ export default {
     SectionFour,
     SectionFive,
     Footer
+  },
+  data() {
+    return {
+      checkMobile: null,
+    }
+  },
+  mounted() {
+    this.checkMobile = checkMobile();
   }
 };
 </script>
@@ -76,5 +85,9 @@ body {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
+}
+
+.w-100vw {
+  width: 100vw!important;
 }
 </style>
