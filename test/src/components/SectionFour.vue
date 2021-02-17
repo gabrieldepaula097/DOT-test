@@ -1,11 +1,11 @@
 <template>
   <div
     class="p-0 div-main"
-    :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 }"
+    :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 && !checkMobile, 'h-55':  this.openTab > 0 && checkMobile}"
   >
     <div
       class="row mx-0"
-      :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 }"
+      :class="{ 'h-35': this.openTab === 0, 'h-50rem': this.openTab > 0 && !checkMobile, 'h-55':  this.openTab > 0 && checkMobile }"
     >
       <div class="col-12 center-flex">
         <div class="accordion accordion-alt" role="tablist">
@@ -23,14 +23,14 @@
                 class="justified-flex first"
                 :class="{
                   'accordion-button': this.openTab !== 1,
-                  'accordion-button-open': this.openTab === 1
+                  'accordion-button-open': this.openTab === 1,
                 }"
                 v-on:click="changeTab(1)"
                 >{{ buttonText }}
                 <img
                   v-if="this.openTab !== 1"
                   :src="require('@/assets/icons/arrow-accordion-collapsed.png')"
-                  alt=""/>
+                  alt="" />
                 <img
                   v-if="this.openTab === 1"
                   :src="require('@/assets/icons/arrow-accordion-open.png')"
@@ -45,13 +45,19 @@
             >
               <b-card-body>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-12 col-lg-4" :class="{'pb-4': checkMobile}">
                     <img
+                      v-if="!checkMobile"
                       class="border-img-accordion"
                       :src="require('@/assets/img/accordion-img.png')"
                     />
+                    <img
+                      v-if="checkMobile"
+                      class="border-img-accordion"
+                      :src="require('@/assets/img/accordion-img-mobile.png')"
+                    />
                   </div>
-                  <div class="col-8 center-flex">
+                  <div class="col-12 col-lg-8 center-flex">
                     <b-card-text>{{ text }}</b-card-text>
                   </div>
                 </div>
@@ -73,14 +79,14 @@
                 class="justified-flex"
                 :class="{
                   'accordion-button': this.openTab !== 2,
-                  'accordion-button-open': this.openTab === 2
+                  'accordion-button-open': this.openTab === 2,
                 }"
                 v-on:click="changeTab(2)"
                 >{{ buttonText }}
                 <img
                   v-if="this.openTab !== 2"
                   :src="require('@/assets/icons/arrow-accordion-collapsed.png')"
-                  alt=""/>
+                  alt="" />
                 <img
                   v-if="this.openTab === 2"
                   :src="require('@/assets/icons/arrow-accordion-open.png')"
@@ -94,13 +100,19 @@
             >
               <b-card-body>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-12 col-lg-4" :class="{'pb-4': checkMobile}">
                     <img
+                      v-if="!checkMobile"
                       class="border-img-accordion"
                       :src="require('@/assets/img/accordion-img.png')"
                     />
+                    <img
+                      v-if="checkMobile"
+                      class="border-img-accordion"
+                      :src="require('@/assets/img/accordion-img-mobile.png')"
+                    />
                   </div>
-                  <div class="col-8 center-flex">
+                  <div class="col-12 col-lg-8 center-flex">
                     <b-card-text>{{ text }}</b-card-text>
                   </div>
                 </div>
@@ -122,14 +134,14 @@
                 class="justified-flex"
                 :class="{
                   'accordion-button': this.openTab !== 3,
-                  'accordion-button-open': this.openTab === 3
+                  'accordion-button-open': this.openTab === 3,
                 }"
                 v-on:click="changeTab(3)"
                 >{{ buttonText }}
                 <img
                   v-if="this.openTab !== 3"
                   :src="require('@/assets/icons/arrow-accordion-collapsed.png')"
-                  alt=""/>
+                  alt="" />
                 <img
                   v-if="this.openTab === 3"
                   :src="require('@/assets/icons/arrow-accordion-open.png')"
@@ -143,13 +155,19 @@
             >
               <b-card-body>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-12 col-lg-4" :class="{'pb-4': checkMobile}">
                     <img
+                      v-if="!checkMobile"
                       class="border-img-accordion"
                       :src="require('@/assets/img/accordion-img.png')"
                     />
+                    <img
+                      v-if="checkMobile"
+                      class="border-img-accordion"
+                      :src="require('@/assets/img/accordion-img-mobile.png')"
+                    />
                   </div>
-                  <div class="col-8 center-flex">
+                  <div class="col-12 col-lg-8 center-flex">
                     <b-card-text>{{ text }}</b-card-text>
                   </div>
                 </div>
@@ -171,14 +189,14 @@
                 class="justified-flex"
                 :class="{
                   'accordion-button': this.openTab !== 4,
-                  'accordion-button-open': this.openTab === 4
+                  'accordion-button-open': this.openTab === 4,
                 }"
                 v-on:click="changeTab(4)"
                 >{{ buttonText }}
                 <img
                   v-if="this.openTab !== 4"
                   :src="require('@/assets/icons/arrow-accordion-collapsed.png')"
-                  alt=""/>
+                  alt="" />
                 <img
                   v-if="this.openTab === 4"
                   :src="require('@/assets/icons/arrow-accordion-open.png')"
@@ -192,13 +210,19 @@
             >
               <b-card-body>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-12 col-lg-4" :class="{'pb-4': checkMobile}">
                     <img
+                      v-if="!checkMobile"
                       class="border-img-accordion"
                       :src="require('@/assets/img/accordion-img.png')"
                     />
+                    <img
+                      v-if="checkMobile"
+                      class="border-img-accordion"
+                      :src="require('@/assets/img/accordion-img-mobile.png')"
+                    />
                   </div>
-                  <div class="col-8 center-flex">
+                  <div class="col-12 col-lg-8 center-flex">
                     <b-card-text>{{ text }}</b-card-text>
                   </div>
                 </div>
@@ -220,14 +244,14 @@
                 class="justified-flex last"
                 :class="{
                   'accordion-button': this.openTab !== 5,
-                  'accordion-button-open': this.openTab === 5
+                  'accordion-button-open': this.openTab === 5,
                 }"
                 v-on:click="changeTab(5)"
                 >{{ buttonText }}
                 <img
                   v-if="this.openTab !== 5"
                   :src="require('@/assets/icons/arrow-accordion-collapsed.png')"
-                  alt=""/>
+                  alt="" />
                 <img
                   v-if="this.openTab === 5"
                   :src="require('@/assets/icons/arrow-accordion-open.png')"
@@ -241,13 +265,19 @@
             >
               <b-card-body>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-12 col-lg-4" :class="{'pb-4': checkMobile}">
                     <img
+                      v-if="!checkMobile"
                       class="border-img-accordion"
                       :src="require('@/assets/img/accordion-img.png')"
                     />
+                    <img
+                      v-if="checkMobile"
+                      class="border-img-accordion"
+                      :src="require('@/assets/img/accordion-img-mobile.png')"
+                    />
                   </div>
-                  <div class="col-8 center-flex">
+                  <div class="col-12 col-lg-8 center-flex">
                     <b-card-text>{{ text }}</b-card-text>
                   </div>
                 </div>
@@ -268,7 +298,7 @@ export default {
       openTab: 1,
       buttonText: "Lorem ipsum",
       text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
     };
   },
   methods: {
@@ -278,8 +308,8 @@ export default {
       } else {
         this.openTab = id;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -351,5 +381,11 @@ export default {
 
 .border-img-accordion {
   border: 12px solid rgb(112, 112, 112);
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .accordion-alt {
+    width: 100%;
+  }
 }
 </style>

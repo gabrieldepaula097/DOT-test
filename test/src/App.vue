@@ -65,6 +65,10 @@ body {
   height: 50rem;
 }
 
+.h-55 {
+  height: 55rem;
+}
+
 .h-66 {
   height: 66%;
 }

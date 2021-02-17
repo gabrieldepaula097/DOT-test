@@ -1,8 +1,7 @@
 <template>
   <div class="p-0 main-div" :class="{ 'h-35': !this.checkMobile }">
     <div class="row mx-0" :class="{ 'h-35': !this.checkMobile }">
-      <div v-if="!checkMobile">
-        <div class="col-6 center-flex">
+        <div class="col-6 center-flex" v-if="!checkMobile">
           <div class="border-img mt-5per">
             <b-img
               v-bind="mainProps"
@@ -11,7 +10,7 @@
             ></b-img>
           </div>
         </div>
-        <div class="col-6 left-flex flex-column">
+        <div class="col-6 left-flex flex-column" v-if="!checkMobile">
           <div class="paragraphs mt-5per">
             <h2>
               <strong>{{ title }}</strong>
@@ -34,7 +33,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div v-if="checkMobile">
         <div class="col-12 center-flex p-0">
           <img
