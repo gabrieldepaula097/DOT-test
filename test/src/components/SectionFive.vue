@@ -3,9 +3,7 @@
     <b-form @submit="onSubmit" class="h-66">
       <div class="row">
         <div class="col-12">
-          <b-form-group
-            id="input-group-1"
-          >
+          <b-form-group id="input-group-1">
             <b-form-input
               id="input-1"
               v-model="form.name"
@@ -44,9 +42,7 @@
           </b-form-group>
         </div>
         <div class="col-12">
-          <b-form-group
-            id="input-group-4"
-          >
+          <b-form-group id="input-group-4">
             <b-form-textarea
               id="input-4"
               v-model="form.message"
@@ -63,7 +59,9 @@
           </b-form-group>
         </div>
         <div class="col-12">
-          <b-button type="submit" variant="light" class="button-submit">ENVIAR</b-button>
+          <b-button type="submit" variant="light" class="button-submit"
+            >ENVIAR</b-button
+          >
         </div>
       </div>
     </b-form>
@@ -75,61 +73,69 @@ export default {
   data() {
     return {
       form: {
-          email: '',
-          name: '',
-          phone: '',
-          message: ''
-        },
-    }
+        email: "",
+        name: "",
+        phone: "",
+        message: ""
+      }
+    };
   },
   computed: {
     nameState() {
-      return this.form.name.length > 2 ? true : false
+      return this.form.name.length > 2 ? true : false;
     },
     messageState() {
-      return this.form.message.length > 20 ? true : false
+      return this.form.message.length > 20 ? true : false;
     }
   },
   methods: {
     onSubmit(event) {
-      event.preventDefault()
-      alert('Formulário validado:\n' + JSON.stringify(this.form))
+      event.preventDefault();
+      alert("Formulário validado:\n" + JSON.stringify(this.form));
     },
     formatter(value) {
-      var x = null
-      if(value.length > 14) {
-        x = value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+      var x = null;
+      if (value.length > 14) {
+        x = value.replace(/\D/g, "").match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
       } else if (value.length <= 14) {
-        x = value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,4})(\d{0,4})/);
+        x = value.replace(/\D/g, "").match(/(\d{0,2})(\d{0,4})(\d{0,4})/);
       }
-    	
-      return value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+
+      return (value = !x[2]
+        ? x[1]
+        : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : ""));
     }
-  },
-}
+  }
+};
 </script>
 
 <style lang="css">
-  .div-main-triangle {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #707070), color-stop(50%, #434343));
+.div-main-triangle {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(50%, #707070),
+    color-stop(50%, #434343)
+  );
   background: -webkit-linear-gradient(top left, #707070 50%, #434343 50%);
   background: -o-linear-gradient(top left, #707070 50%, #434343 50%);
   background: linear-gradient(to bottom right, #707070 50%, #434343 50%);
-  }
+}
 
-  .form-control {
-    background-color: #bfbfbf!important;
-  }
+.form-control {
+  background-color: #bfbfbf !important;
+}
 
-  .form-control:focus {
-    outline: none!important;;
-    box-shadow: none!important;
-    border-color: #bfbfbf!important;
-  }
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #bfbfbf !important;
+}
 
-  .button-submit {
-    width: 9rem;
-    height: 3.5rem;
-    font-weight: bold!important;
-  }
+.button-submit {
+  width: 9rem;
+  height: 3.5rem;
+  font-weight: bold !important;
+}
 </style>

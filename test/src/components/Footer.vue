@@ -5,19 +5,17 @@
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="css">
-  .footer-div {
-    background-color: #313131;
-    height: 92px;
-  }
+.footer-div {
+  background-color: #313131;
+  height: 92px;
+}
 
-  .footer-text {
-    color: white;
-    font-weight: bold;
-  }
+.footer-text {
+  color: white;
+  font-weight: bold;
+}
 </style>

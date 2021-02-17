@@ -3,17 +3,17 @@
     <div class="carousel-container">
       <div class="header-carousel">
         <h1 class="title-carousel">{{ title }}</h1>
-          <h4 class="subtitle-carousel">
-            {{ subtitle }}
-          </h4>
-          <div class="mt-4 arrow-div">
-            <span @click="scroll('carousel-2')">
-              <img
-                class="clickable"
-                :src="require('@/assets/icons/arrow-down.png')"
-              />
-            </span>
-          </div>
+        <h4 class="subtitle-carousel">
+          {{ subtitle }}
+        </h4>
+        <div class="mt-4 arrow-div">
+          <span @click="scroll('carousel-2')">
+            <img
+              class="clickable"
+              :src="require('@/assets/icons/arrow-down.png')"
+            />
+          </span>
+        </div>
       </div>
       <b-carousel
         id="carousel-1"
@@ -109,15 +109,16 @@ export default {
 }
 
 /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (min-width:320px) and (max-width:479px){
-  .header-carousel{
+@media (min-width: 320px) and (max-width: 479px) {
+  .header-carousel {
     background-color: #434343;
     position: initial;
     z-index: 1000;
     width: 100vw;
   }
 
-  .title-carousel, .subtitle-carousel {
+  .title-carousel,
+  .subtitle-carousel {
     color: white;
   }
 
@@ -127,12 +128,12 @@ export default {
   }
 
   .subtitle-carousel {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
     padding-bottom: 1rem;
     font-weight: 300;
   }
 
-  .arrow-div{
+  .arrow-div {
     background-color: transparent;
     position: absolute;
     z-index: 1000;
@@ -144,7 +145,7 @@ export default {
   }
 
   #carousel-1___BV_indicators_ {
-    height:60px;
+    height: 60px;
   }
   #carousel-1___BV_indicator_1_,
   #carousel-1___BV_indicator_2_,
