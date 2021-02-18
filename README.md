@@ -1,6 +1,6 @@
 # DOT-test
 
-##~(Vue.js Version) Setup, Compiles and hot-reloads for live view
+## (Vue.js Version) Setup, Compiles and hot-reloads for live view
 ```
 cd vue-version
 npm install
