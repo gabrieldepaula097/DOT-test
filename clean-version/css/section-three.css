@@ -1,0 +1,44 @@
+h2,
+p {
+  text-align: left;
+  color: white;
+}
+.main-div {
+  background-color: #707070;
+}
+.paragraphs {
+  margin-right: 25%;
+}
+.mt-5per {
+  margin-top: 5%;
+}
+.border-img {
+  border-radius: 100%;
+  display: flex;
+  flex: 0 0 427px;
+  height: 428px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 428px;
+  border: 20px solid #313131;
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 320px) and (max-width: 599px) {
+  h2,
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  .title-three {
+    position: relative;
+    bottom: 4rem;
+  }
+
+  .text-three {
+    position: relative;
+    bottom: 4rem;
+  }
+}

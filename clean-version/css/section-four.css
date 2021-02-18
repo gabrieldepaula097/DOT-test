@@ -1,0 +1,104 @@
+.div-main {
+  background-color: #bfbfbf;
+}
+
+.accordion-alt {
+  width: 85vw;
+}
+
+.card-section-four {
+  border: 0!important;
+}
+
+.btn.justified-flex.w-100 img.img-collapsed,
+.btn.justified-flex.w-100.collapsed img.img-open {
+  display: none;
+}
+
+.btn.justified-flex.w-100.collapsed img.img-collapsed,
+.btn.justified-flex.w-100 img.img-open {
+  display: unset;
+}
+
+.btn.justified-flex.w-100 {
+  color: #707070 ;
+  background-color: #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  height: 82px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-weight: bold ;
+}
+
+.btn.justified-flex.w-100.collapsed:focus,
+.btn.justified-flex.w-100:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn.justified-flex.w-100.collapsed {
+  background-color: #707070;
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
+  height: 82px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-weight: bold;
+}
+
+.first {
+  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.last {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.mb-1px {
+  margin-bottom: 0.5px !important;
+}
+
+.border-img-accordion {
+  border: 12px solid rgb(112, 112, 112);
+}
+
+.p-accordion {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.text-accordion {
+  color: #707070;
+  font-weight: 400;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .accordion-alt {
+    width: 100%;
+  }
+
+  .border-img-accordion {
+    width: 100%;
+  }
+
+  .pb-4-mobile {
+    padding-bottom: 2rem;
+  }
+
+  
+}

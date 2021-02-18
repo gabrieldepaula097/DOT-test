@@ -1,0 +1,63 @@
+.card-slider {
+  background-color: #434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border: 12px solid rgb(112, 112, 112) !important;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  outline: none;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../assets/icons/carousel-left.png") !important;
+  width: 54px !important;
+  height: 37px !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../assets/icons/carousel-right.png") !important;
+  width: 54px !important;
+  height: 37px !important;
+}
+.title-slider {
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.text-slider {
+  top: 2rem;
+  width: 20rem;
+}
+.text-slider h6 {
+  color: white;
+  font-weight: 600;
+}
+
+.main-div {
+  background-color: #434343;
+}
+
+.carousel-control-prev {
+  width: 85px !important;
+}
+.carousel-control-next {
+  width: 85px !important;
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 320px) and (max-width: 479px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 90% !important;
+  }
+  .carousel-control-prev{
+    left: 6rem!important;
+  }
+  .carousel-control-next {
+    right: 6rem !important;
+  }
+}

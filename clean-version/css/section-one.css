@@ -1,0 +1,101 @@
+.header-carousel {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1000;
+  top: 5rem;
+  width: 98vw;
+}
+.title-carousel {
+  color: #4d6128;
+  font-weight: bold;
+}
+.subtitle-carousel {
+  color: #213800;
+  font-weight: bold;
+}
+.carousel-caption {
+  top: 2rem;
+}
+.clickable {
+  cursor: pointer;
+}
+.carousel-indicators {
+  height: 92px;
+  background-color: rgba(49, 49, 49, 0.5);
+  margin: 0;
+  bottom: 0;
+}
+.carousel-indicators li {
+  list-style-type: none;
+  background-image: url("../assets/icons/carousel-slider.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 92px;
+  width: 52px;
+  outline: none;
+  border-top: 25px solid transparent;
+  border-bottom: 0;
+}
+.carousel-indicators li.active,
+.carousel-indicators li.active,
+.carousel-indicators li.active {
+  background-image: url("../assets/icons/carousel-slider-active.png");
+  background-color: transparent;
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .header-carousel {
+    background-color: #434343;
+    position: initial;
+    z-index: 1000;
+    width: 100vw;
+  }
+
+  .title-carousel,
+  .subtitle-carousel {
+    color: white;
+  }
+
+  .title-carousel {
+    padding-top: 1rem;
+    font-weight: bold;
+  }
+
+  .subtitle-carousel {
+    margin-bottom: 0 !important;
+    padding-bottom: 1rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .arrow-div {
+    background-color: transparent;
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clickable {
+    height: 4rem;
+  }
+
+  .carousel-indicators {
+    height: 60px;
+  }
+  .carousel-indicators li {
+    background-image: url("../assets/icons/carousel-slider-mobile.png");
+    height: 92px;
+    width: 32px;
+    border-top: 15px solid transparent;
+  }
+
+  .carousel-indicators li.active,
+  .carousel-indicators li.active,
+  .carousel-indicators li.active  {
+    background-image: url("../assets/icons/carousel-slider-active-mobile.png");
+  }
+}
